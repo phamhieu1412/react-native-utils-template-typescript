@@ -2,6 +2,10 @@ package com.rntemplate;
 
 import com.facebook.react.ReactActivity;
 
+import com.facebook.react.ReactActivityDelegate; //<== react-native-gesture-handler
+import com.facebook.react.ReactRootView; //<== react-native-gesture-handler
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView; //<== react-native-gesture-handler
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -11,5 +15,16 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "RNTemplate";
+  }
+
+  //<== react-native-gesture-handler
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+        return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
   }
 }
