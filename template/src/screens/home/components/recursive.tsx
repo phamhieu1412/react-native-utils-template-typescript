@@ -1,7 +1,7 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {CHierarchy} from 'react-native-utils-components';
-import {dimensionsScale} from 'react-native-utils-scale';
+import { StyleSheet, View } from 'react-native';
+import { CHierarchy } from 'react-native-utils-components';
+import { dimensionsScale } from 'react-native-utils-scale';
 
 export interface Props {
   name: string;
@@ -83,7 +83,7 @@ const RecursiveScreen: React.FC<Props> = props => {
         data={recursiveData}
         textField="shopCode"
         childField="childs"
-        textStyle={{color: 'black'}}
+        textStyle={{ color: 'black' }}
         iconColor="black"
         onSelect={item => {
           console.log(`Selected ${item.length} item`);

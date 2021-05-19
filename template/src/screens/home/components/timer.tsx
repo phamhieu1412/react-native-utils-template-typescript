@@ -1,9 +1,9 @@
-import {CButton} from 'components';
-import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {CTimer} from 'react-native-utils-components';
-import {dimensionsScale} from 'react-native-utils-scale';
-const {scale} = dimensionsScale;
+import { CButton } from 'components';
+import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { CTimer } from 'react-native-utils-components';
+import { dimensionsScale } from 'react-native-utils-scale';
+const { scale } = dimensionsScale;
 
 export interface Props {
   name: string;

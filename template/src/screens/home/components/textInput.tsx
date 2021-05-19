@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {CTextInput} from 'react-native-utils-components';
-import {dimensionsScale} from 'react-native-utils-scale';
-const {scale} = dimensionsScale;
+import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { CTextInput } from 'react-native-utils-components';
+import { dimensionsScale } from 'react-native-utils-scale';
+const { scale } = dimensionsScale;
 
 export interface Props {
   name: string;
@@ -12,7 +12,7 @@ const TextInputScreen: React.FC<Props> = props => {
   return (
     <View style={styles.container}>
       <CTextInput
-        style={{backgroundColor: '#F6F7F8'}}
+        style={{ backgroundColor: '#F6F7F8' }}
         label="Normal"
         placeholder="Placeholder"
         placeholderTextColor="gray"
@@ -21,7 +21,7 @@ const TextInputScreen: React.FC<Props> = props => {
       />
 
       <CTextInput
-        style={{backgroundColor: '#F6F7F8', marginTop: scale(10)}}
+        style={{ backgroundColor: '#F6F7F8', marginTop: scale(10) }}
         label="Password"
         placeholder="Placeholder"
         placeholderTextColor="gray"
@@ -30,7 +30,7 @@ const TextInputScreen: React.FC<Props> = props => {
       />
 
       <CTextInput
-        style={{backgroundColor: '#F6F7F8', marginTop: scale(10)}}
+        style={{ backgroundColor: '#F6F7F8', marginTop: scale(10) }}
         label="Currency"
         placeholder="Placeholder"
         placeholderTextColor="gray"
@@ -40,7 +40,7 @@ const TextInputScreen: React.FC<Props> = props => {
       />
 
       <CTextInput
-        style={{backgroundColor: '#F6F7F8', marginTop: scale(10)}}
+        style={{ backgroundColor: '#F6F7F8', marginTop: scale(10) }}
         label="Numeric"
         placeholder="Placeholder"
         placeholderTextColor="gray"
