@@ -1,10 +1,10 @@
 import { COLORS } from 'config';
 import React from 'react';
-import { StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StatusBar, TouchableOpacity, View } from 'react-native';
 import { CurveBottomBar } from 'react-native-utils-navigation-bar';
-import { dimensionsScale } from 'react-native-utils-scale';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from 'screens/home';
+import { styles } from './styles';
 
 export interface Props {}
 
@@ -106,31 +106,3 @@ const MainScreen: React.FC<Props> = _props => {
 MainScreen.defaultProps = defaultProps;
 
 export default MainScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: dimensionsScale.scale(20),
-  },
-  button: {
-    marginVertical: dimensionsScale.scale(5),
-  },
-  btnCircle: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    bottom: 40,
-  },
-  imgCircle: {
-    width: 30,
-    height: 30,
-    tintColor: 'gray',
-  },
-  img: {
-    width: 30,
-    height: 30,
-  },
-});

@@ -1,3 +1,1 @@
-export const constant = {
-  RootKey: 'Root',
-};
+export const TEST = [];
