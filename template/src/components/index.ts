@@ -1,2 +1,2 @@
-import CButton from './Button';
+import CButton from './button';
 export { CButton };
