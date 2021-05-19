@@ -1,7 +1,7 @@
 {
   "name": "react-native-utils-template-typescript",
   "title": "React Native Tempalte Typescript",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "React Native Tempalte Typescript",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,10 @@
     "baseUrl": "https://github.com/hoaphantn7604/react-native-utils-template-typescript"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "template",
+    "typescript",
+    "hooks"
   ],
   "author": {
     "name": "Hoa Phan",
