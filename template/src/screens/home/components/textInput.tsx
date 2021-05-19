@@ -8,7 +8,7 @@ export interface Props {
   name: string;
 }
 
-const TextInputScreen: React.FC<Props> = props => {
+const TextInputScreen: React.FC<Props> = _props => {
   return (
     <View style={styles.container}>
       <CTextInput

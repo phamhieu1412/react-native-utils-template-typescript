@@ -9,7 +9,7 @@ export interface Props {
   name: string;
 }
 
-const DropdownScreen: React.FC<Props> = props => {
+const DropdownScreen: React.FC<Props> = _props => {
   const [start, setStart] = useState<boolean>(false);
 
   return (

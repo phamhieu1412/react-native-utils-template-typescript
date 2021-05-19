@@ -76,7 +76,7 @@ const recursiveData = [
   },
 ];
 
-const RecursiveScreen: React.FC<Props> = props => {
+const RecursiveScreen: React.FC<Props> = _props => {
   return (
     <View style={styles.container}>
       <CHierarchy

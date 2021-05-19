@@ -1,11 +1,10 @@
-import { useNavigation } from '@react-navigation/native';
 import { COLORS } from 'config';
-import React, { useEffect } from 'react';
-import { StyleSheet, TouchableOpacity, View, StatusBar } from 'react-native';
+import React from 'react';
+import { StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { CurveBottomBar } from 'react-native-utils-navigation-bar';
 import { dimensionsScale } from 'react-native-utils-scale';
-import HomeScreen from 'screens/home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import HomeScreen from 'screens/home';
 
 export interface Props {}
 
@@ -14,9 +13,7 @@ const defaultProps = {
 };
 
 StatusBar.setBarStyle('dark-content');
-const MainScreen: React.FC<Props> = ({ route }: any) => {
-  const { goBack, navigate } = useNavigation();
-
+const MainScreen: React.FC<Props> = _props => {
   const _renderIcon = (routeName: string, selectTab: string) => {
     let icon = '';
 

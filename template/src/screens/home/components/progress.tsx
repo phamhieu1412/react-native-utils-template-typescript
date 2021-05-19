@@ -11,7 +11,7 @@ export interface Props {
   name: string;
 }
 
-const SliderStepScreen: React.FC<Props> = props => {
+const SliderStepScreen: React.FC<Props> = _props => {
   const [step, setStep] = useState(1);
   const [stage, setStage] = useState(2);
 
