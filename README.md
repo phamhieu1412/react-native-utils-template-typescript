@@ -1,3 +1,6 @@
+## Usage
+`$ npx react-native init MyApp --template react-native-utils-template-typescript`
+
 ### Get started
 #### Run cmd
 ```js
@@ -7,9 +10,6 @@ Step 3: npx react-native init MyApp --template react-native-utils-template-types
 Step 4: cd MyApp
 Step 5: npm run android or npm run ios
 ```
-
-## Usage
-`$ npx react-native init MyApp --template react-native-utils-template-typescript`
 
 ## Demo
 ![](https://github.com/hoaphantn7604/file-upload/blob/master/document/template/demo.png)
