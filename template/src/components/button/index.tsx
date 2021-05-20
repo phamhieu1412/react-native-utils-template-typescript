@@ -11,7 +11,7 @@ interface Props {
   bgColor?: string;
   style?: ViewStyle;
   fontSize?: number | any;
-  onPress: () => void;
+  onPress?: () => void;
   border?: boolean;
 }
 
