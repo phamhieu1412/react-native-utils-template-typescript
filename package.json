@@ -1,7 +1,7 @@
 {
   "name": "react-native-utils-template-typescript",
   "title": "React Native Tempalte Typescript",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "React Native Tempalte Typescript",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
