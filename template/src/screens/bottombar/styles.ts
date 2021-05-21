@@ -1,13 +1,15 @@
 import { StyleSheet } from 'react-native';
-import { dimensionsScale } from 'react-native-utils-scale';
+import { useScale } from 'react-native-utils-toolkit';
+
+const {scale} = useScale;
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: dimensionsScale.scale(20),
+    padding: scale(20),
   },
   button: {
-    marginVertical: dimensionsScale.scale(5),
+    marginVertical: scale(5),
   },
   btnCircle: {
     width: 70,

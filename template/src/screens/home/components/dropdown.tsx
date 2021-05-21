@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { CDropdown } from 'react-native-utils-components';
-import { dimensionsScale } from 'react-native-utils-scale';
+import { useScale } from 'react-native-utils-toolkit';
+
+const { scale } = useScale;
 
 export interface Props {
   name: string;
@@ -44,10 +46,10 @@ export default TimerScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: dimensionsScale.scale(20),
+    padding: scale(20),
   },
   btn: {
-    width: dimensionsScale.scale(100),
-    marginTop: dimensionsScale.scale(20),
+    width: scale(100),
+    marginTop: scale(20),
   },
 });

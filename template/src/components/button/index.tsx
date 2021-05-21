@@ -1,9 +1,9 @@
 import { COLORS } from 'config';
 import React from 'react';
 import { Text, TouchableOpacity, ViewStyle } from 'react-native';
-import { dimensionsScale } from 'react-native-utils-scale';
+import { useScale } from 'react-native-utils-toolkit';
 import { styles } from './styles';
-const { scale } = dimensionsScale;
+const { scale } = useScale;
 
 interface Props {
   title?: string;
@@ -37,7 +37,7 @@ const ButtonComponent: React.FC<Props> = props => {
   if (border) {
     return (
       <TouchableOpacity
-        onPress={() => onPress()}
+        onPress={onPress}
         style={[
           styles.container,
           {
@@ -62,7 +62,7 @@ const ButtonComponent: React.FC<Props> = props => {
   }
   return (
     <TouchableOpacity
-      onPress={() => onPress()}
+      onPress={onPress}
       style={[
         styles.container,
         { backgroundColor: bgColor === '' ? COLORS.BUTTON : bgColor },

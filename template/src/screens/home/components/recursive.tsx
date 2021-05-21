@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { CHierarchy } from 'react-native-utils-components';
-import { dimensionsScale } from 'react-native-utils-scale';
+import { useScale } from 'react-native-utils-toolkit';
+
+const { scale } = useScale;
 
 export interface Props {
   name: string;
@@ -98,6 +100,6 @@ export default RecursiveScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: dimensionsScale.scale(20),
+    padding: scale(20),
   },
 });

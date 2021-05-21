@@ -2,8 +2,9 @@ import { CButton } from 'components';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { CTimer } from 'react-native-utils-components';
-import { dimensionsScale } from 'react-native-utils-scale';
-const { scale } = dimensionsScale;
+import { useScale } from 'react-native-utils-toolkit';
+
+const { scale } = useScale;
 
 export interface Props {
   name: string;
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    padding: dimensionsScale.scale(20),
+    padding: scale(20),
   },
   button: {
     marginVertical: scale(30),

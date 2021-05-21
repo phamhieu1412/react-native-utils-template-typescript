@@ -20,9 +20,9 @@
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.0.0",
     "react-native-svg": "^12.1.1",
-    "react-native-utils-components": "^1.2.1",
+    "react-native-utils-components": "^2.0.0",
     "react-native-utils-navigation-bar": "^1.0.6",
-    "react-native-utils-scale": "^1.0.2",
+    "react-native-utils-toolkit": "^1.0.0",
     "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-native-utils-scale|react-native-gesture-handler|react-native-screens|@react-native-community|react-native-indicators|react-native-material-textfield|react-native-material-buttons)/)"
+      "/node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-native-utils-toolkit|react-native-gesture-handler|react-native-screens|@react-native-community|react-native-indicators|react-native-material-textfield|react-native-material-buttons)/)"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/"
