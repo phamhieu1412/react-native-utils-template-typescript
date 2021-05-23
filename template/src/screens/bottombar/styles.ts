@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { useScale } from 'react-native-utils-toolkit';
 
-const {scale} = useScale;
+const { scale } = useScale;
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,21 +12,27 @@ export const styles = StyleSheet.create({
     marginVertical: scale(5),
   },
   btnCircle: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
+    borderRadius: scale(35),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
-    bottom: 40,
+    padding: scale(10),
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 0.5,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+    elevation: 1,
   },
   imgCircle: {
-    width: 30,
-    height: 30,
+    width: scale(30),
+    height: scale(30),
     tintColor: 'gray',
   },
   img: {
-    width: 30,
-    height: 30,
+    width: scale(30),
+    height: scale(30),
   },
 });
