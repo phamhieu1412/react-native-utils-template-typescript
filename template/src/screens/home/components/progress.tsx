@@ -1,3 +1,4 @@
+import { COLORS } from 'config';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {
@@ -12,14 +13,38 @@ const ic_step2 = require('./../../../assets/images/icons/step2.png');
 const ic_step3 = require('./../../../assets/images/icons/step3.png');
 const ic_step4 = require('./../../../assets/images/icons/step4.png');
 const { scale } = useScale;
+const data = [
+  { text: 'Step 1', status: true },
+  { text: 'Step 2', status: true },
+  { text: 'Step 3', status: true },
+  { text: 'Step 4', status: false },
+];
+const data2 = [
+  { text: 'Step 1', icon: ic_step1, status: true },
+  { text: 'Step 2', icon: ic_step2, status: true },
+  { text: 'Step 3', icon: ic_step3, status: true },
+  { text: 'Step 4', icon: ic_step4, status: false },
+];
+const data3 = [
+  { stage: 'S1', text: 'Hello S1', status: true },
+  { stage: 'S2', text: 'Hello S2', status: true },
+  { stage: 'S3', text: 'Hello S3', status: true },
+  { stage: 'S4', text: 'Hello S4', status: false },
+];
+const data4 = [
+  { icon: ic_step1, text: 'Hello S1', status: true },
+  { icon: ic_step2, text: 'Hello S2', status: true },
+  { icon: ic_step3, text: 'Hello S3', status: true },
+  { icon: ic_step4, text: 'Hello S4', status: false },
+];
 
 export interface Props {
   name: string;
 }
 
 const SliderStepScreen: React.FC<Props> = _props => {
-  const [step, setStep] = useState(1);
-  const [step2, setStep2] = useState(1);
+  const [step, setStep] = useState(2);
+  const [step2, setStep2] = useState(2);
   const [stage, setStage] = useState(2);
   const [stage2, setStage2] = useState(2);
 
@@ -28,12 +53,7 @@ const SliderStepScreen: React.FC<Props> = _props => {
       <View style={styles.row}>
         <Text style={styles.title}>Step Progress</Text>
         <CStepProgress
-          data={[
-            { text: 'Step 1', status: true },
-            { text: 'Step 2', status: true },
-            { text: 'Step 3', status: true },
-            { text: 'Step 4', status: false },
-          ]}
+          data={data}
           selectIndex={step}
           onSelectIndex={index => {
             setStep(index);
@@ -47,19 +67,14 @@ const SliderStepScreen: React.FC<Props> = _props => {
 
         <CStepProgress
           style={{ marginTop: 20 }}
-          data={[
-            { text: 'Step 1', icon: ic_step1, status: true },
-            { text: 'Step 2', icon: ic_step2, status: true },
-            { text: 'Step 3', icon: ic_step3, status: true },
-            { text: 'Step 4', icon: ic_step4, status: false },
-          ]}
+          data={data2}
           selectIndex={step2}
           onSelectIndex={index => {
             setStep2(index);
           }}
-          activeColor="#32C5FF"
+          activeColor={COLORS.SECONDARY}
           inActiveColor="#C6CDD8"
-          selectColor="#32C5FF"
+          selectColor={COLORS.SECONDARY}
           textColor="gray"
           textSize={15}
         />
@@ -68,12 +83,7 @@ const SliderStepScreen: React.FC<Props> = _props => {
       <View style={styles.row}>
         <Text style={styles.title}>Tooltip Progress</Text>
         <CTooltipProgress
-          data={[
-            { stage: 'S1', text: 'Hello S1', status: true },
-            { stage: 'S2', text: 'Hello S2', status: true },
-            { stage: 'S3', text: 'Hello S3', status: true },
-            { stage: 'S4', text: 'Hello S4', status: false },
-          ]}
+          data={data3}
           activeColor="#32C5FF"
           inActiveColor="#C6CDD8"
           selectColor="#32C5FF"
@@ -85,15 +95,10 @@ const SliderStepScreen: React.FC<Props> = _props => {
 
         <CTooltipProgress
           style={{ marginTop: 20 }}
-          data={[
-            { icon: ic_step1, text: 'Hello S1', status: true },
-            { icon: ic_step2, text: 'Hello S2', status: true },
-            { icon: ic_step3, text: 'Hello S3', status: true },
-            { icon: ic_step4, text: 'Hello S4', status: false },
-          ]}
-          activeColor="#32C5FF"
+          data={data4}
+          activeColor={COLORS.SECONDARY}
           inActiveColor="#C6CDD8"
-          selectColor="#32C5FF"
+          selectColor={COLORS.SECONDARY}
           selectIndex={stage2}
           onSelectIndex={index => {
             setStage2(index);

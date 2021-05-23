@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { COLORS } from 'config';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { CTextInput } from 'react-native-utils-components';
 import { useScale } from 'react-native-utils-toolkit';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const { scale } = useScale;
 
@@ -13,40 +15,68 @@ const TextInputScreen: React.FC<Props> = _props => {
   return (
     <View style={styles.container}>
       <CTextInput
-        style={{ backgroundColor: '#F6F7F8' }}
         label="Normal"
         placeholder="Placeholder"
         placeholderTextColor="gray"
-        textError="Error"
-        onChangeText={() => {}}
+        onChangeText={(text: string) => {
+          console.log(text);
+        }}
       />
 
       <CTextInput
-        style={{ backgroundColor: '#F6F7F8', marginTop: scale(10) }}
+        style={styles.textinput}
         label="Password"
         placeholder="Placeholder"
         placeholderTextColor="gray"
         secureTextEntry
-        onChangeText={() => {}}
+        onChangeText={(text: string) => {
+          console.log(text);
+        }}
+        textError="Error"
+        renderLeftIcon={() => (
+          <AntDesign
+            style={styles.icon}
+            color="gray"
+            name="unlock"
+            size={scale(20)}
+          />
+        )}
+        iconStyle={{ tintColor: 'gray' }}
       />
 
       <CTextInput
-        style={{ backgroundColor: '#F6F7F8', marginTop: scale(10) }}
+        style={styles.textinput2}
         label="Currency"
         placeholder="Placeholder"
         placeholderTextColor="gray"
         currency
         unitCurrency="$"
-        onChangeText={() => {}}
+        onChangeText={(text: string) => {
+          console.log(text);
+        }}
       />
 
       <CTextInput
-        style={{ backgroundColor: '#F6F7F8', marginTop: scale(10) }}
+        style={styles.textinput2}
+        labelStyle={{ color: COLORS.SECONDARY }}
+        iconStyle={{ tintColor: COLORS.SECONDARY }}
+        inputStyle={{ color: COLORS.SECONDARY }}
         label="Numeric"
         placeholder="Placeholder"
         placeholderTextColor="gray"
         numeric
-        onChangeText={() => {}}
+        onChangeText={(text: string) => {
+          console.log(text);
+        }}
+        renderLeftIcon={() => (
+          <AntDesign
+            style={styles.icon}
+            color={COLORS.SECONDARY}
+            name="Safety"
+            size={scale(20)}
+          />
+        )}
+        textError="Error"
       />
     </View>
   );
@@ -59,8 +89,18 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: scale(20),
   },
-  btn: {
-    width: scale(100),
+  textinput: {
     marginTop: scale(20),
+    borderBottomWidth: scale(0.5),
+    borderBottomColor: 'gray',
+  },
+  textinput2: {
+    marginTop: scale(20),
+    backgroundColor: 'white',
+    borderRadius: scale(8),
+    padding: scale(12),
+  },
+  icon: {
+    marginRight: scale(5),
   },
 });

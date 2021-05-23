@@ -14,7 +14,7 @@ export type COLOR = {
 
 const COLORS: COLOR = {
   PRIMARY: '#FF3030',
-  SECONDARY: '#3AAA35',
+  SECONDARY: '#F4A460',
   BUTTON: 'black',
   BUTTON_TEXT_COLOR: 'gray',
   TEXT_COLOR: 'black',
